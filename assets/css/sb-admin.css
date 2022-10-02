@@ -7,8 +7,8 @@
 /* Global Styles */
 
 body {
-    margin-top: 100px;  
-    background: #0f4e74  
+    margin-top: 100px;
+    background: #0f4e74
 }
 
 @media(min-width:768px) {
@@ -25,7 +25,7 @@ body {
     width: 100%;
     padding: 0;
     background-color: #fff;
-    min-height: 600px;    
+    min-height: 600px;
 }
 
 .huge {
@@ -34,9 +34,7 @@ body {
 }
 
 @media(min-width:768px) {
-    #wrapper {
-        
-    }
+    #wrapper {}
 
     #page-wrapper {
         padding: 10px;
@@ -75,12 +73,12 @@ body {
     float: left;
     position: absolute;
     margin-top: 0;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: #fff;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 .top-nav>.open>.dropdown-menu>li>a {
@@ -96,7 +94,7 @@ ul.message-dropdown {
 
 li.message-preview {
     width: 275px;
-    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
 
 li.message-preview>a {
@@ -179,17 +177,17 @@ ul.alert-dropdown {
     border-color: #5cb85c;
 }
 
-.panel-green > .panel-heading {
+.panel-green>.panel-heading {
     border-color: #5cb85c;
     color: #fff;
     background-color: #5cb85c;
 }
 
-.panel-green > a {
+.panel-green>a {
     color: #5cb85c;
 }
 
-.panel-green > a:hover {
+.panel-green>a:hover {
     color: #3d8b3d;
 }
 
@@ -197,17 +195,17 @@ ul.alert-dropdown {
     border-color: #d9534f;
 }
 
-.panel-red > .panel-heading {
+.panel-red>.panel-heading {
     border-color: #d9534f;
     color: #fff;
     background-color: #d9534f;
 }
 
-.panel-red > a {
+.panel-red>a {
     color: #d9534f;
 }
 
-.panel-red > a:hover {
+.panel-red>a:hover {
     color: #b52b27;
 }
 
@@ -215,17 +213,41 @@ ul.alert-dropdown {
     border-color: #f0ad4e;
 }
 
-.panel-yellow > .panel-heading {
+.panel-yellow>.panel-heading {
     border-color: #f0ad4e;
     color: #fff;
     background-color: #f0ad4e;
 }
 
-.panel-yellow > a {
+.panel-yellow>a {
     color: #f0ad4e;
 }
 
-.panel-yellow > a:hover {
+.panel-yellow>a:hover {
     color: #df8a13;
 }
 
+/* LOGIN */
+.login-form {
+    background: #FFFFFF;
+    max-width: 360px;
+    margin-left: -180px;
+    margin: 0 auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.login-form input {
+    width: 100%;
+    margin-bottom: 1.4rem;
+    padding: 1rem;
+    background-color: #ecf2f4;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.login-form h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
