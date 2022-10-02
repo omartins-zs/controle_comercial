@@ -26,6 +26,7 @@
 </head>
 
 <body>
+
     <div id="wrapper">
 
         <?php
@@ -34,6 +35,7 @@
 
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header text-center">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -156,7 +158,7 @@
                         </li>
 
                         <li>
-                            <a href="<?php echo site_url('login/logout') ?>"><i class="fa fa-fw fa-power-off"></i> Sair</a>
+                            <a href="<?= base_url('login/logout') ?>"><i class="fa fa-fw fa-power-off"></i> Sair</a>
                         </li>
                     </ul>
                 </div>

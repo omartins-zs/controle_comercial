@@ -1,0 +1,7 @@
+Repositorio de ajuda : https://github.com/cfgfernando/controlecomercial.ismweb
+
+
+Documentaçao de Session do Codeigniter : https://codeigniter.com/userguide3/libraries/sessions.html?highlight=session#database-driver
+
+
+Biblioteca de Autenticação Ion Auth : http://benedmunds.com/ion_auth/

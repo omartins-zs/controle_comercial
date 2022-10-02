@@ -9,7 +9,7 @@ function setar_msg($id, $msg, $tipo)
         switch ($tipo) {
             case 'erro':
                 $CI->session->set_flashdata($id, '<div class="alert alert-danger alert-dismissible" role="alert">
-                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <strong></strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>' . $msg . '
@@ -18,7 +18,7 @@ function setar_msg($id, $msg, $tipo)
 
             case 'sucesso';
                 $CI->session->set_flashdata($id, '<div class="alert alert-success alert-dismissible" role="alert">
-                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <strong></strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $msg . '
             </div>');
                 break;
