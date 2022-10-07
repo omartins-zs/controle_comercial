@@ -21,6 +21,10 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/font-awesome/css/font-awesome.min.css?<?= date("H:i:s"); ?>">
 
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/jquery/jquery.datatable/css/datatables.min.css?<?= date("H:i:s"); ?>">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/jquery/jquery.datatable/css/datatables_bootstrap.css?<?= date("H:i:s"); ?>">
+
     <title><?= $titulo ?></title>
 
 </head>
