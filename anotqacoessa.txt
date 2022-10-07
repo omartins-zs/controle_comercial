@@ -1,0 +1,52 @@
+
+ <?php if ($this->ion_auth->logged_in()) {
+
+?>
+Validando formulario de login e testando
+navbar aqui 
+
+
+depois do nav
+<?PHP 
+}
+
+
+
+
+
+<!<?php $this->load->view('templates/js'); ?> -->
+
+
+
+/* LOGIN */
+.login-form {
+  background: #FFFFFF;
+  max-width: 360px;
+  margin-left: -180px;
+  margin: 0 auto;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.login-form input {
+    width: 100%;
+    margin-bottom: 1.4rem;
+    padding: 1rem;
+    background-color: #ecf2f4;
+    border-radius: 0.2rem;
+    border: none;
+}
+.login-form h3 { text-align: center; margin-top: 0; margin-bottom: 20px; }
+
+/* MARGIN */
+.margin-top10 { margin-top: 10px }
+.margin-top20 { margin-top: 20px }
+.margin-top30 { margin-top: 30px }
+.margin-top40 { margin-top: 40px }
+.margin-top50 { margin-top: 50px }
+
+.margin-bottom10 { margin-bottom: 10px }
+.margin-bottom20 { margin-bottom: 20px }
+.margin-bottom30 { margin-bottom: 30px }
+.margin-bottom40 { margin-bottom: 40px }
+.margin-bottom50 { margin-bottom: 50px }
