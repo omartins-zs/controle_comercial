@@ -148,10 +148,10 @@
                                 Configuração<i class="fa fa-angle-down pull-right"></i></a>
                             <ul id="configuracao" class="collapse">
                                 <li>
-                                    <a href="<?php echo site_url('config') ?>">Sistema</a>
+                                    <a href="<?= base_url('config') ?>">Sistema</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo site_url('usuarios') ?>">Usuários</a>
+                                    <a href="<?= base_url('usuarios') ?>">Usuários</a>
                                 </li>
 
                             </ul>
