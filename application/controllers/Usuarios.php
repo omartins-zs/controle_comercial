@@ -18,5 +18,21 @@ class Usuarios extends CI_Controller
         }
         $this->load->model('ion_auth_model');
     }
-    
+    public function index()
+    {
+
+        $dados['users'] = $this->ion_auth->users()->result(); // get all users
+
+        // Titulo da aba no navegador
+        $dados["titulo"] = "Usuarios";
+
+        // Pega os dados do Model
+
+        // Passa um conjunto de variaveis para as views
+        $this->load->vars($dados);
+
+        $this->load->view('templates/header');
+        $this->load->view('pages/usuarios');
+        $this->load->view('templates/footer');
+    }
 }
