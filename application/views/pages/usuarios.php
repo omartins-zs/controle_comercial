@@ -30,8 +30,7 @@
 
                <div class="col-lg-12">
 
-                   <div class="table-responsive">
-                       <table class="table table-bordered table-striped">
+                       <table class="table table-bordered table-striped" id="datatable">
                            <thead>
                                <tr>
                                    <th>#</th>
@@ -58,7 +57,6 @@
                            </tbody>
 
                        </table>
-                   </div>
                </div>
            </div>
 
