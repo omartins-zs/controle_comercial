@@ -11,11 +11,15 @@ class Usuarios extends CI_Controller
             setar_msg('msgerro', 'Erro: Você precisa estar logado no sistema.', 'erro');
             redirect('login');
         }
-        // Verifica se o usuario e admin
-        if (!$this->ion_auth->is_admin()) {
+        // Verifica se o usuario e admin | Function pega do nome do banco | Usado pelo Id e in_group
+
+        # single group (by id)
+        if (!$this->ion_auth->in_group(1)) {
+            // $this->session->set_flashdata('message', 'You must be part of the group 1 to view this page');
             setar_msg('msgerro', 'Erro: Você precisa ser um administrador para acessar essa pagina', 'erro');
             redirect('home');
         }
+        
         $this->load->model('ion_auth_model');
     }
     public function index()
