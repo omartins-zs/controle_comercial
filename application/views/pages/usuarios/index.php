@@ -19,9 +19,9 @@
            <!-- /.row -->
 
            <!-- Button de novo usuario -->
-           <div class="row">
+           <div class="row margin-bottom10">
                <div class="col-lg-12 text-right">
-                   <a href="" title="Novo usuario" class="btn btn-success"><i class="fa fa-plus-square"></i></a>
+                   <a href="<?= base_url('usuarios/add') ?>" title="Novo usuario" class="btn btn-success"><i class="fa fa-plus-square"></i></a>
                </div>
            </div>
 
@@ -63,7 +63,7 @@
                </div>
            </div>
            <!-- Fim tabela -->
-           
+
        </div>
        <!-- /.container-fluid -->
    </div>

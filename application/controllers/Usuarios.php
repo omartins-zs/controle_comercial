@@ -36,7 +36,23 @@ class Usuarios extends CI_Controller
         $this->load->vars($dados);
 
         $this->load->view('templates/header');
-        $this->load->view('pages/usuarios');
+        $this->load->view('pages/usuarios/index');
+        $this->load->view('templates/footer');
+    }
+    public function add()
+    {
+        // $dados['users'] = $this->ion_auth->users()->result(); // get all users
+
+        // Titulo da aba no navegador
+        $dados["titulo"] = "Novo usuario";
+
+        // Pega os dados do Model
+
+        // Passa um conjunto de variaveis para as views
+        $this->load->vars($dados);
+
+        $this->load->view('templates/header');
+        $this->load->view('pages/usuarios/novo');
         $this->load->view('templates/footer');
     }
 }

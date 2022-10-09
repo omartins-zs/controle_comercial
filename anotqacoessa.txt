@@ -11,6 +11,11 @@ depois do nav
 }
 
 
+UPDATE `groups` SET `name` = 'Administrador', `description` = 'Administrador de Sistemas' WHERE `groups`.`id` = 1
+
+
+
+UPDATE `groups` SET `name` = 'Vendedores', `description` = 'Acesso restrito a umas funções do sistema' WHERE `groups`.`id` = 2
 
 
 

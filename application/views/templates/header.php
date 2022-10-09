@@ -10,7 +10,7 @@
     <meta name="description" content="Sistema de Controle Comercial com Ordem de Serviço">
     <meta name="author" content="Gabriel Martins">
 
-    <title>Sistema comercial</title>
+    <!-- <title>Sistema comercial</title> -->
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.css?<?= date("H:i:s"); ?>">
