@@ -25,6 +25,16 @@
                </div>
            </div>
 
+           <!-- Mensagens de sucesso e erro -->
+           <div class="row">
+               <div class="col-lg-12">
+                   <?php
+                    get_msg('msgerro');
+                    get_msg('msgsucess');
+                    ?>
+               </div>
+           </div>
+
            <?php
             // echo '<pre>';
             // print_r($users);

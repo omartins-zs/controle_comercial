@@ -52,14 +52,28 @@ class Usuarios extends CI_Controller
         // Validando os inputs
         $this->form_validation->set_rules('nome_usuario', 'Nome', 'required|min_length[4]', array('min_length' => 'O campo nome de usuário deve ter pelo menos 4 caractere(s).'));
         $this->form_validation->set_rules('email_usuario', 'E-mail', 'required|valid_email|is_unique[users.email]');
-        
+
         $this->form_validation->set_rules('senha_usuario', 'Senha', 'required|min_length[4]|max_length[20]', array('min_length' => 'O campo senha deve ter pelo menos 4 caractere(s) e no máximo 20.', 'max_length' => 'O campo senha deve ter pelo menos 4 caractere(s) e no máximo 20.'));
         $this->form_validation->set_rules('senha_usuario2', 'Confirmar senha', 'required|matches[senha_usuario]', array('matches' => 'O campo senha não confere.'));
-        
+
         if ($this->form_validation->run() == TRUE) {
-            echo '<pre>';
-            print_r($this->input->post());
-            echo '</pre>';
+            // Function register do ion_auth
+            if ($this->form_validation->run() == TRUE) {
+                $username = $this->input->post('nome_usuario');
+                $password = $this->input->post('senha_usuario');
+                $email = $this->input->post('email_usuario');
+                $tipo = $this->input->post('tipo_usuario');
+
+                // Passei o username como adicional pq a funçao nao funcionou 100% e não trouxe o nome cadastrado
+                $additional_data = array(
+                    'username' => $username,
+                );
+
+                $group = array($tipo);
+                $this->ion_auth->register($username, $password, $email, $additional_data, $group);
+                setar_msg('msgsucess', 'Cadastro realizado com sucesso.', 'sucesso');
+                redirect('usuarios', 'refresh');
+            }
         } else {
             $this->load->view('templates/header');
             $this->load->view('pages/usuarios/novo');

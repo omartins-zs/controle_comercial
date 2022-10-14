@@ -48,7 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo site_url('principal') ?>">Sistema Comercial</a>
+                    <a class="navbar-brand" href="<?= site_url('principal') ?>">Sistema Comercial</a>
                 </div>
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -78,7 +78,7 @@
                             <a href="javascript:;" data-toggle="collapse" data-target="#cadastro"><i class="fa fa-group"></i> Cadastro <i class="fa fa-angle-down pull-right"></i></a>
                             <ul id="cadastro" class="collapse">
                                 <li>
-                                    <a href="<?php echo site_url('clientes') ?>">Clientes</a>
+                                    <a href="<?= site_url('clientes') ?>">Clientes</a>
                                 </li>
                                 <li>
                                     <a href="#">Fornecedor</a>

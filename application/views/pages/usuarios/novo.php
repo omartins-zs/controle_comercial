@@ -29,6 +29,14 @@
 
                    <form id="form_add" name="form_add" action="" class="" method="post">
                        <div class="form-group">
+                           <label>Tipo de usuário</label>
+                           <select name="tipo_usuario" class="form-control">
+                               <option value="1">Administrador</option>
+                               <option value="2">Vendedor</option>
+                           </select>
+                       </div>
+
+                       <div class="form-group">
                            <label>Nome do usuário</label>
                            <input type="text" class="form-control" name="nome_usuario" value="<?= set_value('nome_usuario') ?>" placeholder="Nome usuário">
                        </div>
