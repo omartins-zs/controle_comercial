@@ -10,7 +10,7 @@
                    <h1 class="display-4">Usuarios cadastrados</h1>
                    <hr>
                    <ol class="breadcrumb">
-                       <li><a href="<?php base_url() ?>">Home</a></li>
+                       <li><a href="<?= base_url() ?>">Home</a></li>
                        <li class="active">Usuarios cadastrados</li>
                    </ol>
                </div>

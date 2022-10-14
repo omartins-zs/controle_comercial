@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background: #0f4e74
+    /* background: #0f4e74; */
 }
 
 @media(min-width:768px) {
