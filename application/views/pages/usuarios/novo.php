@@ -10,7 +10,7 @@
                    <h1 class="display-4">Novo Usuario</h1>
                    <hr>
                    <ol class="breadcrumb">
-                       <li><a href="<?php base_url() ?>">Home</a></li>
+                       <li><a href="<?= base_url() ?>">Home</a></li>
                        <li class="active">Novo usuario</li>
                    </ol>
                </div>
@@ -20,34 +20,38 @@
 
            <div class="row">
                <div class="col-lg-12">
-                   <p><?= validation_errors() ?></p>
+                   <?php erros_validacao() ?>
                </div>
            </div>
            <!-- Formulario de novo usuario -->
            <div class="row">
                <div class="col-lg-12">
 
-                   <form action="" method="post" class="" name="form_add">
+                   <form id="form_add" name="form_add" action="" class="" method="post">
                        <div class="form-group">
-                           <label for="">Nome do usuarios</label>
-                           <input type="text" class="form-control" name="nome_usuario" id="" placeholder="Nome do usuario">
-                       </div>
-                       <div class="form-group">
-                           <label for="">Email</label>
-                           <input type="email" class="form-control" name="email_usuario" id="" placeholder="Eamil">
-                       </div>
-                       <div class="form-group">
-                           <label for="">Senha</label>
-                           <input type="password" class="form-control" name="senha_usuario" id="" placeholder="Senha">
+                           <label>Nome do usuário</label>
+                           <input type="text" class="form-control" name="nome_usuario" value="<?= set_value('nome_usuario') ?>" placeholder="Nome usuário">
                        </div>
 
-                       <button form="form_add" type="submit" class="btn btn-success">Cadastrar</button>
+                       <div class="form-group">
+                           <label>Email</label>
+                           <input type="email" class="form-control" name="email_usuario" value="<?= set_value('email_usuario') ?>" placeholder="E-mail do usuário">
+                       </div>
 
+                       <div class="form-group">
+                           <label>Senha</label>
+                           <input type="password" class="form-control" name="senha_usuario" placeholder="Senha de acesso">
+                       </div>
+
+                       <div class="form-group">
+                           <label>Repetir senha</label>
+                           <input type="password" class="form-control" name="senha_usuario2" placeholder="Repetir senha">
+                       </div>
+
+                       <button form="form_add" type="submit" class="btn btn-success">ENTRAR</button>
                    </form>
                </div>
-           </div>
-           <!-- Fim do Form -->
+           </div><!-- / formulario de novo registro -->
 
        </div>
-       <!-- /.container-fluid -->
    </div>

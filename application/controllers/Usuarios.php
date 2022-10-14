@@ -22,9 +22,9 @@ class Usuarios extends CI_Controller
 
         $this->load->model('ion_auth_model');
     }
+
     public function index()
     {
-
         $dados['users'] = $this->ion_auth->users()->result(); // get all users
 
         // Titulo da aba no navegador
@@ -41,7 +41,6 @@ class Usuarios extends CI_Controller
     }
     public function add()
     {
-
         // Titulo da aba no navegador
         $dados["titulo"] = "Novo usuario";
 
@@ -50,28 +49,17 @@ class Usuarios extends CI_Controller
         // Passa um conjunto de variaveis para as views
         $this->load->vars($dados);
 
-
-
-
         // Validando os inputs
-        $this->form_validation->set_rules('nome_usuario', 'Nome', 'required');
-        $this->form_validation->set_rules('email_usuario', 'E-mail', 'required');
-        $this->form_validation->set_rules('senha_usuario', 'Senha', 'required');
-
+        $this->form_validation->set_rules('nome_usuario', 'Nome', 'required|min_length[4]', array('min_length' => 'O campo nome de usuário deve ter pelo menos 4 caractere(s).'));
+        $this->form_validation->set_rules('email_usuario', 'E-mail', 'required|valid_email|is_unique[users.email]');
+        
+        $this->form_validation->set_rules('senha_usuario', 'Senha', 'required|min_length[4]|max_length[20]', array('min_length' => 'O campo senha deve ter pelo menos 4 caractere(s) e no máximo 20.', 'max_length' => 'O campo senha deve ter pelo menos 4 caractere(s) e no máximo 20.'));
+        $this->form_validation->set_rules('senha_usuario2', 'Confirmar senha', 'required|matches[senha_usuario]', array('matches' => 'O campo senha não confere.'));
+        
         if ($this->form_validation->run() == TRUE) {
             echo '<pre>';
             print_r($this->input->post());
             echo '</pre>';
-
-            // $identity = $this->input->post('login');
-            // $password = $this->input->post('senha');
-            // $remember = TRUE; // remember the user
-            // if ($this->ion_auth->login($identity, $password, $remember)) {
-            //     redirect('home', 'refresh');
-            // } else {
-            //     setar_msg('msgerro', 'Os dados de acesso estão incorretos', 'erro');
-            //     redirect('login', 'refresh');
-            // }
         } else {
             $this->load->view('templates/header');
             $this->load->view('pages/usuarios/novo');

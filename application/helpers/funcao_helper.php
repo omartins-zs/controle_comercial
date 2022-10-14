@@ -40,5 +40,17 @@ function get_msg($id, $printar = TRUE)
             return TRUE;
         }
     }
-    return FALSE;
+    // return FALSE;
+}
+
+// Exibir a FLASHDATA
+
+function erros_validacao()
+{
+    if (validation_errors()) {
+        echo '<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+        echo validation_errors('<p>', '</p>');
+        echo '<div>';
+    }
 }

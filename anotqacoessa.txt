@@ -9,7 +9,9 @@ navbar aqui
 depois do nav
 <?PHP 
 }
+Add styles e margin e add new Usuarios no control
 
+Teste de envio Formulario e Verificaçoes
 
 UPDATE `groups` SET `name` = 'Administrador', `description` = 'Administrador de Sistemas' WHERE `groups`.`id` = 1
 
